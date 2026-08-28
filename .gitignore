@@ -1,0 +1,13 @@
+# Referência visual de outra empresa, com dados de contato reais de terceiros.
+# Material de estudo, não faz parte da entrega.
+index_exemplo.html
+
+# Sistema operacional
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editores
+.vscode/
+.idea/
+*.swp
