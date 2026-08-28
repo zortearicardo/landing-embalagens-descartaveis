@@ -2,6 +2,11 @@
 # Material de estudo, não faz parte da entrega.
 index_exemplo.html
 
+# Tabela do ERP do cliente: preço de custo, margem, estoque e código de barras.
+# Fonte para o conteúdo da página, mas não pode ir para um repositório público.
+*.xls
+*.xlsx
+
 # Sistema operacional
 Thumbs.db
 desktop.ini

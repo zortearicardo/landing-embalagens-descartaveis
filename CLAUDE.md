@@ -17,6 +17,10 @@ WhatsApp**.
   barbearia) usada como base para o repertório de efeitos de scroll. **Não é a
   página do cliente e não deve ser editada nem publicada.**
 
+- `tabela de produto.xls` — export do ERP do cliente (621 itens, 82 marcas), a
+  fonte das marcas citadas no catálogo e na faixa de logos. Tem preço de custo e
+  estoque, então está no `.gitignore`: **não comitar.**
+
 Não há package.json, build step ou servidor. Para ver o resultado, basta abrir
 `index.html` no navegador.
 
@@ -51,6 +55,13 @@ Não há package.json, build step ou servidor. Para ver o resultado, basta abrir
 - O menu mobile usa `clip-path: circle()` ancorado no canto superior direito. Se
   mudar o padding do header em telas pequenas, ajuste também as coordenadas do
   `clip-path` no media query correspondente.
+- As logos da faixa `.marcas` são **data URI base64 embutidas** (PNG, 72px de
+  altura, ~36KB no total) — não são URL externa como as fotos do Unsplash. Foi
+  o que manteve o arquivo único e a faixa funcionando offline. Ao trocar uma
+  logo: baixe do site do fabricante, corte a moldura vazia, redimensione para
+  72px de altura e converta para base64. Fibraform e Darnel são logos "em
+  caixa" (fundo sólido, quase quadradas) e sobem para 58px via
+  `.logo img[alt="..."]` para equilibrar o peso óptico das demais.
 - Publicar como Artifact quebra as imagens: o CSP do Artifact bloqueia hosts
   externos. Para publicar lá, seria preciso embutir as fotos como data URI.
 
@@ -61,12 +72,12 @@ Já preenchidos na página:
 - Cidade: Maringá-PR e região
 - Endereço: Rua João Cardoso de Lima, 676 — Jardim Nilza
 - Atendimento: segunda a sexta, 8h às 17h
+- URL da loja / "Fazer pedido": `https://embalagem.columbia1.com.br/catalogo/online`
 
 Ainda são **placeholders** e precisam ser trocados quando o cliente informar
 (a lista também está no comentário no topo do `index.html`):
 
 - WhatsApp: `5511900000000`
 - E-mail: `contato@embalafacil.com.br`
-- URL da loja: `https://loja.embalafacil.com.br`
 - Nome da empresa: `EmbalaFácil`
 - Números da prova social (atributos `data-count` na barra de estatísticas)
