@@ -72,12 +72,12 @@ Já preenchidos na página:
 - Cidade: Maringá-PR e região
 - Endereço: Rua João Cardoso de Lima, 676 — Jardim Nilza
 - Atendimento: segunda a sexta, 8h às 17h
+- WhatsApp: `5544991122420` — (44) 99112-2420
 - URL da loja / "Fazer pedido": `https://embalagem.columbia1.com.br/catalogo/online`
 
 Ainda são **placeholders** e precisam ser trocados quando o cliente informar
 (a lista também está no comentário no topo do `index.html`):
 
-- WhatsApp: `5511900000000`
 - E-mail: `contato@embalafacil.com.br`
 - Nome da empresa: `EmbalaFácil`
 - Números da prova social (atributos `data-count` na barra de estatísticas)
